@@ -1,5 +1,6 @@
 import pandas as pd
 
+from charts import gerar_grafico_por_canal
 from metrics import calcular_csat, calcular_nps
 
 
@@ -24,6 +25,7 @@ def gerar_relatorio(df):
 def main():
     df = carregar_dados()
     gerar_relatorio(df)
+    gerar_grafico_por_canal(df)
 
 
 if __name__ == "__main__":
