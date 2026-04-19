@@ -1,4 +1,4 @@
-from metrics import calcular_nps
+from metrics import calcular_csat, calcular_nps
 
 
 def test_nps_todos_promotores():
@@ -11,3 +11,11 @@ def test_nps_todos_detratores():
 
 def test_nps_lista_vazia():
     assert calcular_nps([]) == 0.0
+
+
+def test_csat_totalmente_satisfeito():
+    assert calcular_csat([5, 5, 4, 4]) == 100.0
+
+
+def test_csat_lista_vazia():
+    assert calcular_csat([]) == 0.0
