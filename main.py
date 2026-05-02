@@ -1,7 +1,7 @@
 import pandas as pd
 
 from charts import gerar_grafico_por_canal
-from metrics import calcular_csat, calcular_nps
+from metrics import calcular_csat, calcular_nps, classificar_nps
 
 
 def carregar_dados(caminho="data/pesquisas.csv"):
@@ -12,8 +12,11 @@ def gerar_relatorio(df):
     nps_geral = calcular_nps(df["nota_nps"].tolist())
     csat_geral = calcular_csat(df["nota_csat"].tolist())
 
+    grupos = classificar_nps(df["nota_nps"].tolist())
+
     print(f"NPS geral: {nps_geral}")
     print(f"CSAT geral: {csat_geral}%")
+    print(f"Promotores: {grupos['promotores']} | Neutros: {grupos['neutros']} | Detratores: {grupos['detratores']}")
     print()
 
     for canal, grupo in df.groupby("canal"):

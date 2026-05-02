@@ -16,3 +16,15 @@ def calcular_csat(notas, nota_maxima=5, nota_corte=4):
 
     satisfeitos = sum(1 for nota in notas if nota >= nota_corte)
     return round(satisfeitos / total * 100, 1)
+
+
+def classificar_nps(notas):
+    promotores = sum(1 for nota in notas if nota >= 9)
+    neutros = sum(1 for nota in notas if 7 <= nota <= 8)
+    detratores = sum(1 for nota in notas if nota <= 6)
+
+    return {
+        "promotores": promotores,
+        "neutros": neutros,
+        "detratores": detratores,
+    }
