@@ -9,7 +9,7 @@ def calcular_nps(notas):
     return round((promotores - detratores) / total * 100, 1)
 
 
-def calcular_csat(notas, nota_maxima=5, nota_corte=4):
+def calcular_csat(notas, nota_corte=4):
     total = len(notas)
     if total == 0:
         return 0.0
