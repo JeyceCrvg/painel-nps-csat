@@ -19,10 +19,16 @@ def gerar_relatorio(df):
     print(f"Promotores: {grupos['promotores']} | Neutros: {grupos['neutros']} | Detratores: {grupos['detratores']}")
     print()
 
+    piores = []
     for canal, grupo in df.groupby("canal"):
         nps_canal = calcular_nps(grupo["nota_nps"].tolist())
         csat_canal = calcular_csat(grupo["nota_csat"].tolist())
+        piores.append((canal, nps_canal))
         print(f"{canal}: NPS={nps_canal} | CSAT={csat_canal}%")
+
+    canal_critico, _ = min(piores, key=lambda item: item[1])
+    print()
+    print(f"Canal que mais precisa de atenção: {canal_critico}")
 
 
 def main():
