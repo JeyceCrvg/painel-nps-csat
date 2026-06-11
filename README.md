@@ -1,5 +1,8 @@
 # 📊 Painel NPS & CSAT
 
+![status](https://img.shields.io/badge/status-concluído-brightgreen)
+![license](https://img.shields.io/badge/license-MIT-blue)
+
 > Script em Python que processa respostas de pesquisas de satisfação fictícias e calcula NPS e CSAT, geral e por canal de atendimento.
 
 ---
