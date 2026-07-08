@@ -5,7 +5,8 @@ from datetime import datetime, timedelta
 CANAIS = ["chat", "email", "reclame_aqui"]
 
 
-def gerar_respostas(quantidade=200, saida="data/pesquisas.csv"):
+def gerar_respostas(quantidade=200, saida="data/pesquisas.csv", seed=42):
+    random.seed(seed)
     inicio = datetime(2026, 1, 1)
     linhas = []
     for i in range(quantidade):
