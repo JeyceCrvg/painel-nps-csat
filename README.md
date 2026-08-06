@@ -1,20 +1,8 @@
 # Painel NPS e CSAT
 
-Script em Python que processa respostas de pesquisas de satisfacao ficticias e calcula NPS e CSAT, geral e por canal de atendimento.
+Script em Python pra calcular NPS e CSAT em cima de respostas de pesquisa de satisfacao. Fiz depois de mexer com essas metricas no trabalho e ficar curiosa se dava pra automatizar o calculo por canal (chat, email, reclame aqui) em vez de fazer na mao em planilha.
 
-## Funcionalidades
-
-- Geracao de dados ficticios de pesquisas
-- Calculo de NPS (promotores, neutros, detratores)
-- Calculo de CSAT
-- Relatorio por canal (chat, email, Reclame Aqui)
-- Grafico comparativo entre canais
-
-## Tecnologias
-
-Python, Pandas, Matplotlib
-
-## Como executar
+Pra rodar:
 
 ```
 git clone https://github.com/JeyceCrvg/painel-nps-csat.git
@@ -24,7 +12,7 @@ python generate_data.py
 python main.py
 ```
 
-Exemplo de saida:
+Isso gera um csv com respostas ficticias e imprime algo assim:
 
 ```
 NPS geral: -53.0
@@ -37,3 +25,5 @@ reclame_aqui: NPS=-42.4 | CSAT=36.4%
 
 Canal que mais precisa de atencao: email
 ```
+
+Tambem salva um grafico comparando os canais em data/metricas_por_canal.png.
