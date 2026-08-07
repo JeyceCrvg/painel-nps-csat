@@ -27,3 +27,5 @@ Canal que mais precisa de atencao: email
 ```
 
 Tambem salva um grafico comparando os canais em data/metricas_por_canal.png.
+
+![print rodando](docs/print.png)
